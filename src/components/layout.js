@@ -24,23 +24,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div className="h-screen flex flex-col">
+      {false && <Header siteTitle={data.site.siteMetadata.title} />}
+      <main className="flex-grow">{children}</main>
+      <footer className="p-4 text-xl text-gray-400">
+        Action is Always the Answer
+      </footer>
+    </div>
   )
 }
 
