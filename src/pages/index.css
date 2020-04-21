@@ -4,6 +4,11 @@
 
 @import "tailwindcss/utilities";
 
+
+html {
+  overflow-y: auto;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
